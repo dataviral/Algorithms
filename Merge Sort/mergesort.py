@@ -9,7 +9,6 @@ def mergesort(arr):
         mergesort(c)
         return merge(b,c,arr)
 
-
 def merge(b, c, a):
     i = j = k = 0;
     while i < len(b) and j < len(c):
