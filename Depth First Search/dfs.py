@@ -13,6 +13,7 @@ mark v with count
 for each vertex w in V adjacent to w do
     if w is marked with 0
         dfs(w)
+
 """
 COUNT = 0
 
@@ -20,15 +21,28 @@ Vertices = {
     "0" : 0,
     "1" : 0,
     "2" : 0,
-    "3" : 0
+    "3" : 0,
+    "4" : 0
 }
 
 adj_mat = {
-    "0" : [0, 1, 0, 0],
-    "1" : [1, 0, 1, 1],
-    "2" : [0, 1, 0, 0],
-    "3" : [0, 1, 0, 0]
+    "0" : [0, 1, 0, 0, 0],
+    "1" : [1, 0, 1, 1, 0],
+    "2" : [0, 1, 0, 0, 0],
+    "3" : [0, 1, 0, 0, 0],
+    "4" : [1, 0, 0, 0, 0]
 }
+
+"""
+    The Graph
+    
+            2
+        /
+0 - 1  - 3
+ |
+ 4
+
+ """
 
 def DFS(start_vetex):
     dfs(start_vetex)
