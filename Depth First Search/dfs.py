@@ -35,7 +35,7 @@ adj_mat = {
 
 """
     The Graph
-    
+
             2
         /
 0 - 1  - 3
@@ -55,9 +55,13 @@ def dfs(v):
     global COUNT
     COUNT +=1
     Vertices[v] = COUNT
+    ORDER.append(v)
+    ORDER.append("->")
     for w in Vertices:
         if Vertices[w] == 0 and adj_mat[v][int(w)] :
             dfs(w)
 
+ORDER = []
+
 DFS("0")
-print(Vertices)
+print(*ORDER)
