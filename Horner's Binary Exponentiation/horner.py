@@ -1,6 +1,6 @@
 def polynomial(P, x):
     p = P[-1]
-    for i in range(0, len(P)-1, -1) :
+    for i in reversed(range(0, len(P)-1)) :
         p = p*x + P[i]
     return p
 
